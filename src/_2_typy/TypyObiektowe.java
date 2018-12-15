@@ -7,7 +7,6 @@ public class TypyObiektowe {
         Scanner  wejscie=new Scanner(System.in);
         System.out.print("Podaj swoje imie");
         String imie=wejscie.nextLine().toLowerCase();
-
         int ileznakow=imie.length();
         String ostatnia=imie.toLowerCase().substring(imie.length()-1);
         boolean czyKonczySieNaA=imie.toLowerCase().endsWith("a");
