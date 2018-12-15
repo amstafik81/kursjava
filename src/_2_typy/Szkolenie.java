@@ -8,6 +8,7 @@ public class Szkolenie {
     String nazwa;
     LocalDate data;
     //1.tworzenie nowego obiektu
+    //budowa konstruktora = [public/private] [nazwa] [(lista parametrów)]
     //kontruktor bezparametryczny
     public Szkolenie(){
         System.out.println("wykonał sie konstrutor bezparametryczny");
@@ -19,15 +20,20 @@ public class Szkolenie {
         this.liczbaUczestnikow=liczba;
         this.cena=cena;
         this.data=data;
-        System.out.println("Nazwa szkolenia:"+this.nazwa);
-        System.out.println("Ilosc uczestnikow "+this.liczbaUczestnikow);
-        System.out.println("Cena szkolenia "+this.cena);
-        System.out.println("Data szkolenia"+this.data);
-
     }
 
+
     //2.wypisanie informacji o obiekcie
-    //
+    //tworzenie metody
+    //[public/private] [typ zwracany] [nazwa] [(lista parametrow)]
+   public void wyswietl(){
+       System.out.println("Nazwa szkolenia:"+this.nazwa);
+       System.out.println("Ilosc uczestnikow "+this.liczbaUczestnikow);
+       System.out.println("Cena szkolenia "+this.cena);
+       System.out.println("Data szkolenia"+this.data);
+
+   }
+
 
 
 }
