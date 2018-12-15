@@ -19,7 +19,10 @@ public class Szkolenie {
         this.liczbaUczestnikow=liczba;
         this.cena=cena;
         this.data=data;
-        System.out.println(this.nazwa);
+        System.out.println("Nazwa szkolenia:"+this.nazwa);
+        System.out.println("Ilosc uczestnikow "+this.liczbaUczestnikow);
+        System.out.println("Cena szkolenia "+this.cena);
+        System.out.println("Data szkolenia"+this.data);
 
     }
 
