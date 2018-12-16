@@ -9,13 +9,14 @@ import java.util.Scanner;
 public class WiekEmerytalny {
     public static void main(String[] args) {
 
-        System.out.print("Podaj date swoich urodzin w formacie (yyyy-mm-dd):");
-        String dataUr=new Scanner(System.in).nextLine().toLowerCase();
-        System.out.print("Podaj plec (K lub M)");
-        String plec=new Scanner(System.in).nextLine();
+
 
 
         try{
+            System.out.print("Podaj date swoich urodzin w formacie (yyyy-mm-dd):");
+            String dataUr=new Scanner(System.in).nextLine().toLowerCase();
+            System.out.print("Podaj plec (K lub M)");
+            String plec=new Scanner(System.in).nextLine();
             LocalDate localDate=LocalDate.parse(dataUr, DateTimeFormatter.ofPattern("yyyy-MM-dd"));
             int lata=Period.between(localDate,LocalDate.now()).getYears();
             if (plec.equalsIgnoreCase("K")){
@@ -40,6 +41,9 @@ public class WiekEmerytalny {
                     System.out.println("Juz na emeryturze");
                 }
 
+            }
+            else{
+                System.out.println("Podaj prawidłową płeć");
             }
 
 
