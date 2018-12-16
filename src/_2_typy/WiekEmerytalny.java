@@ -10,22 +10,48 @@ public class WiekEmerytalny {
     public static void main(String[] args) {
 
         System.out.print("Podaj date swoich urodzin w formacie (yyyy-mm-dd):");
-        String dataUr=new Scanner(System.in).nextLine();
-        LocalDate localDate=LocalDate.parse(dataUr, DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+        String dataUr=new Scanner(System.in).nextLine().toLowerCase();
+        System.out.print("Podaj plec (K lub M)");
+        String plec=new Scanner(System.in).nextLine();
 
-        int lata=Period.between(localDate,LocalDate.now()).getYears();
-        System.out.println(lata);
 
-        if(lata<65 && lata>18){
-            System.out.println("Jestes w wieku produkcyjnym");
+        try{
+            LocalDate localDate=LocalDate.parse(dataUr, DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+            int lata=Period.between(localDate,LocalDate.now()).getYears();
+            if (plec.equalsIgnoreCase("K")){
+                if(lata<=65 && lata>=18){
+                    System.out.println("Jestes w wieku produkcyjnym");
+                }
+                else if(lata<18){
+                    System.out.println("Jest za mlody");
+                }
+                else {
+                    System.out.println("Juz na emeryturze");
+                }
+            }
+            else if(plec.equalsIgnoreCase("M")){
+                if(lata<=67 && lata>=18){
+                    System.out.println("Jestes w wieku produkcyjnym");
+                }
+                else if(lata<18){
+                    System.out.println("Jest za mlody");
+                }
+                else {
+                    System.out.println("Juz na emeryturze");
+                }
+
+            }
+
 
         }
-        else if(lata<18){
-            System.out.println("Jest za mlody");
+        catch (java.time.format.DateTimeParseException e){
+                System.out.println("Popraw date");
+
         }
-        else {
-            System.out.println("Juz na emeryturze");
-        }
+
+
+
+
 
 
     }
