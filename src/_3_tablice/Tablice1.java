@@ -16,12 +16,7 @@ public class Tablice1 {
         for(int i=tablicaWypelniona.length-1;i>=0;i--){
             System.out.println(tablicaWypelniona[i]);
         }
-        for(int i=0;i<tablicaWypelniona.length;i++){
-            if (tablicaWypelniona[i]%2==0){
-                System.out.println("Element parzysty "+tablicaWypelniona[i]);
-            }
-            //System.out.println(tablicaWypelniona[i]);
-        }
+
         //pokaz co drugi element
         for(int i=tablicaWypelniona.length-1;i>=0;i+=2){
             System.out.println(tablicaWypelniona[i]);
@@ -31,4 +26,4 @@ public class Tablice1 {
         }
 
     }
-}
+
