@@ -27,5 +27,8 @@ public class Tablice1 {
             System.out.println(tablicaWypelniona[i]);
         }
 
+
+        }
+
     }
 }
