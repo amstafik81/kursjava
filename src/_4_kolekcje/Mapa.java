@@ -14,6 +14,11 @@ public class Mapa {
 
         System.out.println(inwentarz.get("iii"));
         System.out.println(inwentarz.keySet());
+        int suma=0;
+        for(String tmp: inwentarz.keySet()){
+            suma=suma+inwentarz.get(tmp);
+            System.out.println(suma);
+        }
 
 
     }
