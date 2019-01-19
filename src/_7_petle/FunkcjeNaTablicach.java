@@ -2,6 +2,7 @@ package _7_petle;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
+import java.util.stream.IntStream;
 
 public class FunkcjeNaTablicach {
     static  int suma(int[] tablica){
@@ -27,6 +28,9 @@ public class FunkcjeNaTablicach {
             }
         }
         return suma;
+    }
+    public  static int sumaParzyste_strumien(int[] t){
+        return IntStream.of(t).filter(x->x%2==0).sum();
     }
     //dla wygody main testujacego
     public static void main(String[] args) {
