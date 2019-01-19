@@ -19,6 +19,15 @@ public class FunkcjeNaTablicach {
         return suma;
     }
 
+    static int sumaLiczbParzystych(int[] a){
+        int suma=0;
+        for(Integer element:a){
+            if((element%2)== 0){
+                suma+=element;
+            }
+        }
+        return suma;
+    }
     //dla wygody main testujacego
     public static void main(String[] args) {
         int[] a={2,3,2,4,3,2};
@@ -28,6 +37,8 @@ public class FunkcjeNaTablicach {
         System.out.println("Suma tablicy a metoda 2 wynosi: "+suma2(a));
         System.out.println("Suma tablicy b metoda 2 wynosi: "+suma2(b));
         System.out.println("Suma inną metodą wynosi:"+ Arrays.stream(a).sum());
+        System.out.println("Suma elementów parzysthc dla tablicy a:"+sumaLiczbParzystych(a));
+        System.out.println("Suma elementów parzysthc dla tablicy b:"+sumaLiczbParzystych(b));
 
     }
 }
