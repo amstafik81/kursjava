@@ -15,8 +15,6 @@ public class Parkomat {
         {
             System.out.println("Prosze wrzucic kase");
             ileWrzucono+=wejscie.nextInt();
-
-
         }
         if(ileWrzucono>ileDoZaplaty) {
             System.out.println("Za duzo pieniedzy wrzuciles, automat zwroci:"+Math.abs(ileDoZaplaty-ileWrzucono));
