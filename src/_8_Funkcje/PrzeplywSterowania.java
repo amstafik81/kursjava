@@ -11,8 +11,15 @@ public class PrzeplywSterowania {
         meteoda1();
         System.out.println("Metoda1");
         metoda2();
+        powtorz("napis",2);
     }
     static void metoda2(){
         System.out.println("Metoda2");
+    }
+    static int powtorz(String napis,int ileRazy){
+        for(int i=0;i<ileRazy;i++){
+            System.out.println(napis);
+        }
+        return  napis.length()*ileRazy;
     }
 }
