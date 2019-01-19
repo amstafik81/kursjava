@@ -11,6 +11,5 @@ public class PomnozDwieLiczby_Double {
         Double wynik=arg1*arg2;
         System.out.println(wynik);
 
-
     }
 }
