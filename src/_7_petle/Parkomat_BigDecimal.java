@@ -7,9 +7,9 @@ public class Parkomat_BigDecimal {
     public static void main(String[] args) {
         Scanner wejscie=new Scanner(System.in);
         System.out.println("Ile godzin bedziesz parkowac");
-        BigDecimal ileCzasu=wejscie.nextBigDecimal();
+        int ileCzasu=wejscie.nextBigDecimal();
         BigDecimal oplata=new BigDecimal("3.50");
-        BigDecimal ileDoZaplaty=oplata.multiply(ileCzasu);
+        BigDecimal ileDoZaplaty=oplata.multiply(BigDecimal.valueOf(ileCzasu));
         System.out.println("Do zapłąty: "+ileDoZaplaty);
         BigDecimal ileWrzucono=new BigDecimal("0");
         int powrownanie=-1;
