@@ -11,7 +11,7 @@ public class Skarbonka {
         while(skarbonka<100)
         {
             System.out.println("Wrzuc pieniązki");
-            skarbonka=skarbonka+wejscie.nextInt();
+            skarbonka+=wejscie.nextInt();
         }
         System.out.println("Juz masz odpowiednia kase");
 
