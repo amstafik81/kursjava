@@ -2,7 +2,7 @@ package _9_Kalkulator;
 
 import java.util.Scanner;
 
-public class KalkulatorKonsolowy_2 {
+public class KalkulatorKonsolowy_3 {
 
 
 
@@ -14,7 +14,10 @@ public class KalkulatorKonsolowy_2 {
         System.out.println();
         while(true){
             System.out.println("> ");
-            try{
+            if(!wejscie.hasNextDouble()) {
+            break; //koniec
+            }
+            try {
                double arg1=wejscie.nextDouble();
                String operacja=wejscie.next();
                double arg2=wejscie.nextDouble();
@@ -22,7 +25,8 @@ public class KalkulatorKonsolowy_2 {
                 obicz(arg1, operacja, arg2);
             }
             catch (Exception e){
-                break;
+                System.out.println("Bład: "+e);
+                System.out.println("Błąd: "+e.getMessage());
             }
         }
         System.out.println("Dzięki papa");
