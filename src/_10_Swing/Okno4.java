@@ -5,7 +5,7 @@ import java.awt.*;
 
 import static java.awt.Font.BOLD;
 
-public class Okno1 {
+public class Okno4 {
     public static void main(String[] args) {
         JFrame frame=new JFrame();
 
@@ -26,8 +26,14 @@ public class Okno1 {
         Color kolorTla=new Color(0x9F57FF);
         label.setOpaque(true);
         label.setBackground(kolorTla);
-
         frame.add(label);
+        JButton button=new JButton("Ok");
+        button.setFont(new Font("Arial",BOLD,13));
+        frame.add(button);
+
+
+
+
 
         frame.setVisible(true);
     }
