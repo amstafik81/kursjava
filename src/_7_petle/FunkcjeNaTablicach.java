@@ -29,6 +29,25 @@ public class FunkcjeNaTablicach {
         }
         return suma;
     }
+
+    static int max(int[] t){
+        int maxValue = t[0];
+        for(int i=1;i < t.length;i++){
+            if(t[i] > maxValue){
+                maxValue = t[i];
+            }
+        }
+        return maxValue;
+    }
+    static int min(int[] t){
+        int minValue=t[0];
+        for(int i=1;i<t.length;i++){
+            if(t[i]<minValue){
+                minValue=t[i];
+            }
+        }
+        return minValue;
+    }
     public  static int sumaParzyste_strumien(int[] t){
         return IntStream.of(t).filter(x->x%2==0).sum();
     }
@@ -43,6 +62,10 @@ public class FunkcjeNaTablicach {
         System.out.println("Suma inną metodą wynosi:"+ Arrays.stream(a).sum());
         System.out.println("Suma elementów parzysthc dla tablicy a:"+sumaLiczbParzystych(a));
         System.out.println("Suma elementów parzysthc dla tablicy b:"+sumaLiczbParzystych(b));
+        System.out.println("Max w tablicy a:"+max(a));
+        System.out.println("Max w tablicy b:"+max(b));
+        System.out.println("Min w tablicy a:"+min(a));
+        System.out.println("Min w tablicy b:"+min(b));
 
     }
 }
