@@ -5,13 +5,16 @@ import java.awt.*;
 
 import static java.awt.Font.BOLD;
 
-public class Okno4 {
+public class Okno5 {
     public static void main(String[] args) {
         JFrame frame=new JFrame();
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(600,400);
         frame.setTitle("Nasze okno");
+        LayoutManager layout=new FlowLayout();
+        frame.setLayout(layout);
+
         JLabel label=new JLabel("Ala ma kota");
         label.setHorizontalAlignment(SwingConstants.CENTER);
         label.setFont(new Font("Arial", BOLD,40));
@@ -31,7 +34,10 @@ public class Okno4 {
         button.setFont(new Font("Arial",BOLD,13));
        // frame.add(button,BorderLayout.NORTH);
         frame.add(button);
-
+        JButton button2=new JButton("Ok");
+        button.setFont(new Font("Arial",BOLD,13));
+        // frame.add(button,BorderLayout.NORTH);
+        frame.add(button2);
 
 
 
