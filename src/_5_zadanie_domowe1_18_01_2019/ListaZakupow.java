@@ -24,7 +24,7 @@ public class ListaZakupow {
         {
             suma=suma+element.cena*element.ilosc;
         }
-        lista.m
+
         System.out.println(suma);
     }
 
